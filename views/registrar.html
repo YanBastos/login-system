@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(https://wallpaperaccess.com/full/2906429.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            .line1 {
+                margin: 20px auto;
+                background-color: #000;
+                width: 400px;
+                height: 2px;
+            }
+
+            .login {
+                padding: auto;
+                align-items: center;
+                width: 500px;
+                height: auto;
+                margin: 50px auto;
+                border-radius: 20px;
+                background-color: #d9d9d9c9;
+            }
+
+
+            /* input style start */
+            input {
+                width: 300px;
+                height: 35px;
+                margin: 10px;
+                padding-left: 10px;
+                border-radius: 7px;
+                background-color: #17171780;
+                border: none;
+            }
+
+            /* Celphone input style */
+            #tel {
+                border-radius: 50px 10px 10px 50px;
+            }
+
+            ::placeholder {
+
+                color: #3c3c3c;
+            }
+
+            .lr {
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: 30px;
+            }
+
+            .container-itens {
+                padding: 20px;
+                margin: 20px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 150px;
+                height: 40px;
+                align-items: center;
+                text-align: center;
+                border: none;
+                border-radius: 20px;
+                padding: 10px;
+                margin: 20px;
+                background: #E09400;
+                cursor: pointer;
+            }
+
+            .forget {
+                text-decoration: none;
+                color: #000;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <form action="" method="post">
+            <div class="lr">
+                <a href="/views/index.html">
+                    <h3>Acessar sua conta</h3>
+                </a>
+                <a href="/views/registrar.html">
+                    <h3>Crie sua conta</h3>
+                </a>
+            </div>
+            <div class="line">
+                <div class="line1"></div>
+            </div>
+            <div class="container-itens">
+                <input type="text" name="" placeholder="seu nome" id="name_user" required>
+                <input type="email" name="" placeholder="seu e-mail" id="" required>
+                <input type="tel" name="" placeholder="seu telefone" id="tel" required>
+                <button type="submit" value="entrar" class="btn">Criar minha conta</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+</body>
+
+</html>

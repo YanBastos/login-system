@@ -2,15 +2,18 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 
-const port = 3000; //porta 3000
-var path = require('path'); //manipula e seta o dir das views
-const app = express(); // chamando express para definir rotas
-
 var login = "admin";
 var password = "123456";
 
 
-app.use(session({ secret: 'ausuidhaisuhaius' }));
+const port = 3000; //porta 3000
+var path = require('path'); //manipula e seta o dir das views
+const app = express(); // chamando express para definir rotas
+
+
+
+
+app.use(session({secret:'ausuidhaisuhaius' }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.engine('html', require('ejs').renderFile);
@@ -23,9 +26,12 @@ app.post('/', (req, res) => {
     if (req.body.password == password && req.body.login == login) {
         //logado com sucesso
         req.session.login = login;
-        res.redirect('logado');
+
+        res.render('logado');
+
+
     }else{
-        res.render('index');
+        res.render('registrar');
     }
 })
 
